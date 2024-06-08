@@ -15,6 +15,16 @@ module.exports = merge(common, {
     hot: true,
     open: true,
     static: resolvePath("./dist/"),
-    proxy: {}
+    proxy: {
+      '/api': {
+        target: 'https://api.thecatapi.com',
+        ws: true,
+        changeOrigin: true,
+        secure: true,
+        pathRewrite: {
+          '/api': ''
+        },
+      }
+    }
   }
 });

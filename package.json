@@ -9,13 +9,14 @@
     "template"
   ],
   "scripts": {
-    "serve": "webpack-dev-server -c ./build/webpack.config.dev.js",
+    "serve": "cross-env NODE_ENV=development webpack-dev-server -c ./build/webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=production webpack -c ./build/webpack.config.prod.js",
     "server:speed": "webpack-dev-server -c ./build/webpack.config.speed.js",
-    "build": "webpack -c ./build/webpack.config.prod.js",
     "build:analyzer": "webpack -c ./build/webpack.config.analyzer.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^1.7.2",
     "vue": "^2.6.14",
     "vue-router": "3",
     "vuex": "3.1.2"
@@ -32,8 +33,10 @@
     "@vue/cli-service": "~5.0.0",
     "babel-loader": "^8.2.4",
     "core-js": "^3.22.1",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
+    "dotenv-flow": "^4.1.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "eslint-webpack-plugin": "^3.1.1",
