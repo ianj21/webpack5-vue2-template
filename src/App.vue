@@ -12,12 +12,12 @@ import HelloWorld from "./components/HelloWorld.vue";
 export default {
   name: "App",
   components: {
-    HelloWorld
-  }
+    HelloWorld,
+  },
 };
 </script>
 
-<style>
+<style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,4 +26,15 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.tips {
+  color: red;
+  font-size: 50px;
+}
 </style>
+
+// <style lang="scss">
+// .tips {
+//   color: red;
+//   font-size: 50px;
+// }
+// </style>
